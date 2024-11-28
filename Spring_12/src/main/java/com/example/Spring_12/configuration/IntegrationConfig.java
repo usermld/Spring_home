@@ -36,7 +36,7 @@ public class IntegrationConfig {
 
     @Bean
     @ServiceActivator(inputChannel = "fileWriterChanel")
-    public FileWritingMessageHandler messageHandler() {
+    public <FileWritingMessageHandler> FileWritingMessageHandler messageHandler() {
         FileWritingMessageHandler handler =
                 new FileWritingMessageHandler(new File(
                         "D:/GeekBrains/Part_3/HomeWork/Spring_HW/HW_12"));
